@@ -13,6 +13,8 @@ class SignupRequest(BaseModel):
     department: str
     blood_group: Optional[str] = None
     hall: Optional[str] = None
+    school: Optional[str] = None
+    college: Optional[str] = None
     password: str
     confirm_password: str
 
@@ -35,6 +37,8 @@ class ProfileUpdate(BaseModel):
     department: Optional[str] = None
     blood_group: Optional[str] = None
     hall: Optional[str] = None
+    school: Optional[str] = None
+    college: Optional[str] = None
 
 
 class ProfileResponse(BaseModel):
@@ -49,6 +53,8 @@ class ProfileResponse(BaseModel):
     profile_picture: Optional[str]
     blood_group: Optional[str]
     hall: Optional[str]
+    school: Optional[str]
+    college: Optional[str]
     role: str
     is_email_verified: bool
     is_approved: bool

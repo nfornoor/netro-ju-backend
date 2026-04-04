@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     smtp_port: int = 587
     smtp_user: str
     smtp_password: str
-    smtp_from_name: str = "নেত্রকোণা জাহাঙ্গীরনগর"
+    smtp_from_name: str = "গাজীপুর জাহাঙ্গীরনগর"
     smtp_from_email: str
 
     admin_email: str = "hnur8873@gmail.com"

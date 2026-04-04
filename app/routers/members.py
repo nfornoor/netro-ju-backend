@@ -13,7 +13,7 @@ router = APIRouter(prefix="/api/members", tags=["members"])
 @router.get("")
 async def get_members(member: dict = Depends(get_approved_member)):
     result = supabase_admin.table("profiles") \
-        .select("id, full_name, batch, phone_number, upazila, village, email, department, profile_picture, blood_group, hall, role, created_at") \
+        .select("id, full_name, batch, phone_number, upazila, village, email, department, profile_picture, blood_group, hall, school, college, role, created_at") \
         .in_("role", ["member", "admin"]) \
         .order("full_name") \
         .execute()
@@ -33,7 +33,7 @@ async def get_members(member: dict = Depends(get_approved_member)):
 @router.get("/{member_id}")
 async def get_member(member_id: str, current_user: dict = Depends(get_approved_member)):
     result = supabase_admin.table("profiles") \
-        .select("id, full_name, batch, phone_number, upazila, village, email, department, profile_picture, blood_group, hall, role, created_at") \
+        .select("id, full_name, batch, phone_number, upazila, village, email, department, profile_picture, blood_group, hall, school, college, role, created_at") \
         .eq("id", member_id) \
         .single() \
         .execute()

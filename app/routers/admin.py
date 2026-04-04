@@ -11,7 +11,7 @@ settings = get_settings()
 
 router = APIRouter(prefix="/api/admin", tags=["admin"])
 
-MAIN_ADMIN_PHONE = "01816663094"
+MAIN_ADMIN_PHONE = "01902960870"
 
 
 # ─── Users ───────────────────────────────────────────────────────────────────

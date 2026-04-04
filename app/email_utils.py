@@ -27,8 +27,8 @@ async def send_otp_email(to_email: str, full_name: str, otp: str):
     html = f"""
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background: #0f1e3c; padding: 20px; border-radius: 8px 8px 0 0;">
-        <h2 style="color: #c9a227; margin: 0; text-align: center;">নেত্রকোণা জাহাঙ্গীরনগর</h2>
-        <p style="color: #fff; text-align: center; margin: 5px 0;">Netrokona District Union - JU</p>
+        <h2 style="color: #c9a227; margin: 0; text-align: center;">গাজীপুর জাহাঙ্গীরনগর</h2>
+        <p style="color: #fff; text-align: center; margin: 5px 0;">Gazipur District Union - JU</p>
       </div>
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0;">
         <h3 style="color: #0f1e3c;">প্রিয় {full_name},</h3>
@@ -42,7 +42,7 @@ async def send_otp_email(to_email: str, full_name: str, otp: str):
       </div>
     </div>
     """
-    await send_email(to_email, "ইমেইল যাচাইকরণ কোড - নেত্রকোণা জাহাঙ্গীরনগর", html)
+    await send_email(to_email, "ইমেইল যাচাইকরণ কোড - গাজীপুর জাহাঙ্গীরনগর", html)
 
 
 async def send_admin_new_user_notification(full_name: str, email: str, phone: str, batch: str, department: str):
@@ -76,7 +76,7 @@ async def send_approval_email(to_email: str, full_name: str):
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background: #0f1e3c; padding: 20px; border-radius: 8px 8px 0 0;">
         <h2 style="color: #c9a227; margin: 0; text-align: center;">স্বাগতম!</h2>
-        <p style="color: #fff; text-align: center;">নেত্রকোণা জাহাঙ্গীরনগর</p>
+        <p style="color: #fff; text-align: center;">গাজীপুর জাহাঙ্গীরনগর</p>
       </div>
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0;">
         <h3 style="color: #0f1e3c;">প্রিয় {full_name},</h3>
@@ -89,14 +89,14 @@ async def send_approval_email(to_email: str, full_name: str):
       </div>
     </div>
     """
-    await send_email(to_email, "সদস্যপদ অনুমোদিত - নেত্রকোণা জাহাঙ্গীরনগর", html)
+    await send_email(to_email, "সদস্যপদ অনুমোদিত - গাজীপুর জাহাঙ্গীরনগর", html)
 
 
 async def send_rejection_email(to_email: str, full_name: str, reason: str = ""):
     html = f"""
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background: #0f1e3c; padding: 20px; border-radius: 8px 8px 0 0;">
-        <h2 style="color: #c9a227; margin: 0; text-align: center;">নেত্রকোণা জাহাঙ্গীরনগর</h2>
+        <h2 style="color: #c9a227; margin: 0; text-align: center;">গাজীপুর জাহাঙ্গীরনগর</h2>
       </div>
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0;">
         <h3 style="color: #0f1e3c;">প্রিয় {full_name},</h3>
@@ -106,7 +106,7 @@ async def send_rejection_email(to_email: str, full_name: str, reason: str = ""):
       </div>
     </div>
     """
-    await send_email(to_email, "সদস্যপদ অনুরোধ - নেত্রকোণা জাহাঙ্গীরনগর", html)
+    await send_email(to_email, "সদস্যপদ অনুরোধ - গাজীপুর জাহাঙ্গীরনগর", html)
 
 
 async def send_notice_notification(to_emails: list[str], title: str, content: str, notice_type: str, show_donation_button: bool = False):
@@ -122,7 +122,7 @@ async def send_notice_notification(to_emails: list[str], title: str, content: st
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="background: #0f1e3c; padding: 20px; border-radius: 8px 8px 0 0;">
         <h2 style="color: #c9a227; margin: 0;">নতুন {type_label}</h2>
-        <p style="color: #fff; margin: 5px 0;">নেত্রকোণা জাহাঙ্গীরনগর</p>
+        <p style="color: #fff; margin: 5px 0;">গাজীপুর জাহাঙ্গীরনগর</p>
       </div>
       <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 8px 8px; border: 1px solid #e0e0e0;">
         <h3 style="color: #0f1e3c;">{title}</h3>

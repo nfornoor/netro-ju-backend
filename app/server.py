@@ -7,7 +7,7 @@ settings = get_settings()
 
 app = FastAPI(
     title="Netro-JU API",
-    description="Backend API for Netrokona District Union - Jahangirnagar University",
+    description="Backend API for Gazipur District Union - Jahangirnagar University",
     version="1.0.0",
 )
 
